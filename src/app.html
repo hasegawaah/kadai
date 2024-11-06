@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todoリスト with Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-lg p-6 bg-white rounded shadow-md">
+    <h2 class="text-2xl font-semibold text-center text-gray-700 mb-6">Todoリスト with Tailwind CSS</h2>
+    
+    <!-- タスク入力フォーム -->
+    <form class="flex gap-2 mb-6">
+      <input 
+        type="text" 
+        placeholder="新しいタスクを入力" 
+        class="flex-grow p-2 border border-gray-300 rounded"
+      />
+      <button 
+        type="submit" 
+        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        作成
+      </button>
+    </form>
+    
+    <!-- タスクリスト -->
+    <ul class="space-y-4">
+      <!-- タスクの項目 -->
+      <li class="flex items-center justify-between p-2 border border-gray-200 rounded">
+        <input 
+          type="text" 
+          value="サンプルタスク" 
+          disabled 
+          class="flex-grow p-1 text-gray-700"
+        />
+        <div class="flex items-center gap-2 ml-2">
+          <input 
+            type="checkbox" 
+            class="h-4 w-4"
+          />
+          <button 
+            class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+          >
+            消
+          </button>
+        </div>
+      </li>
+      
+      <!-- 完了済みのタスクの例 -->
+      <li class="flex items-center justify-between p-2 border border-gray-200 rounded">
+        <input 
+          type="text" 
+          value="完了済みのタスク" 
+          disabled 
+          class="flex-grow p-1 line-through text-gray-500"
+        />
+        <div class="flex items-center gap-2 ml-2">
+          <input 
+            type="checkbox" 
+            checked 
+            class="h-4 w-4"
+          />
+          <button 
+            class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+          >
+            消
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(0,0 , 0),rgb(255, 255, 255));
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.inputText {
+  padding: 10px;
+}
+
+.submitButton {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+
+.todoList li {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todoList li input {
+  padding: 7px;
+}
+
+
+h1 {
+  @apply text-7xl font-bold mb-12;
+}
